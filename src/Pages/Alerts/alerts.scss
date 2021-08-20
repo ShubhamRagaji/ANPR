@@ -1,0 +1,215 @@
+.Alerts {
+  .alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: khaki;
+    padding: 0 1vw 1vw 1vw;
+    border: 1px solid black;
+    margin: 0.6vw;
+    border-radius: 0.2vw;
+    border-bottom-left-radius: 6vw;
+
+    .diycam_logo {
+      width: 12vw;
+      height: 4vw;
+    }
+
+    .makeinIndia {
+      width: 8vw;
+      height: 4vw;
+    }
+
+    p {
+      background: white;
+      font-size: 1.2vw;
+      padding: 0.4vw 22vw;
+      border-bottom-left-radius: 4vw;
+      border-top-right-radius: 4vw;
+      box-shadow: 6px 6px 10px grey;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2vw;
+
+    .logout {
+      padding: 0.6vw 3.4vw;
+      background: crimson;
+      color: white;
+      border-radius: 0.4vw;
+      font-size: 1vw;
+      margin-top: 1vw;
+      display: block;
+      cursor: pointer;
+      transition: 0.5s;
+      font-weight: 600;
+    }
+
+    .logout:hover {
+      background: #eb2f52;
+    }
+  }
+
+  //Popup
+  .LogoutPopup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    z-index: 1000;
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 92%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 92%;
+      }
+    }
+
+    .Logout {
+      background: white;
+      width: 40vw;
+      border-radius: 0.6vw;
+      font-size: 1.2vw;
+      z-index: 1;
+
+      .logout_img {
+        width: 7.2vw;
+        margin-top: 2vw;
+      }
+      p {
+        text-align: center;
+        padding: 1vw;
+      }
+
+      .yes-no {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1vw;
+
+        .yes-btn,
+        .no-btn {
+          padding: 0.5vw 2.8vw;
+          border-radius: 2vw;
+          background: crimson;
+          color: white;
+          font-size: 1vw;
+          cursor: pointer;
+          margin-bottom: 1vw;
+        }
+      }
+    }
+  }
+
+  //Image Popup
+  .image_popup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    z-index: 1000;
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 92%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 92%;
+      }
+    }
+
+    .overlay {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .im-popup {
+      background: white;
+      width: 36vw;
+      height: 25vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: relative;
+
+      .detected_popupimg {
+        width: 38vw;
+        margin-top: 4vw;
+      }
+
+      .exit {
+        position: absolute;
+        width: 1.6vw;
+        top: 2%;
+        right: 3%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 96%;
+    font-size: 0.88vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    padding: 1vw;
+  }
+
+  tr:nth-child(even) {
+    background-color: #fff0f0;
+  }
+
+  .detected_img {
+    width: 4vw;
+    cursor: pointer;
+  }
+}

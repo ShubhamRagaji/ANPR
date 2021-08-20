@@ -1,0 +1,120 @@
+.Role-Login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dcefff;
+
+  .rl-login {
+    display: flex;
+    box-shadow: 4px 8px 16px grey;
+    border-radius: 2vw;
+
+    .rl-info {
+      background-blend-mode: multiply;
+      width: 30vw;
+      padding: 24vw 18vw 8vw 3.4vw;
+      background-color: darksalmon;
+      color: white;
+      border-bottom-left-radius: 2vw;
+      border-top-left-radius: 2vw;
+      background-size: cover;
+      opacity: 90%;
+      background-image: url("../../components/Images/background.jpg");
+
+      h2 {
+        font-size: 2.4vw;
+        margin-left: -11vw;
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 2.4vw;
+        margin-left: -0.2vw;
+        margin-top: -1vw;
+      }
+      .info {
+        width: 32vw;
+        font-size: 1.2vw;
+      }
+    }
+  }
+
+  .rl-login-fields {
+    text-align: center;
+    width: 22vw;
+    padding: 2vw;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    background: white;
+
+    h2 {
+      margin-bottom: 8vw;
+      font-size: 1.8vw;
+    }
+
+    input {
+      border: 1.6px solid black;
+      width: 100%;
+      padding: 1vw 1vw 1vw 1.6vw;
+      font-size: 1.2vw;
+      border-radius: 0.4vw;
+      box-shadow: 6px 6px 10px grey;
+    }
+
+    ::placeholder {
+      font-weight: 600;
+    }
+
+    .username {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .username-icon {
+        width: 2vw;
+        position: absolute;
+        right: 4%;
+      }
+    }
+
+    .password {
+      margin-top: 2vw;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .eye-icon {
+        width: 1.8vw;
+        position: absolute;
+        right: 5%;
+      }
+    }
+
+    .forgot-password-link {
+      float: right;
+      padding-top: 1vw;
+      padding-right: 1vw;
+      font-size: 1.2vw;
+    }
+
+    .forgot-password-link:hover {
+      text-decoration: underline;
+    }
+
+    .roleLogin-button {
+      margin-top: 8vw;
+      padding: 1vw;
+      width: 100%;
+      border-radius: 2vw;
+      font-size: 1vw;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: linear-gradient(33deg, red, blue);
+      cursor: pointer;
+      color: white;
+      box-shadow: 10px 8px 16px grey;
+    }
+  }
+}
