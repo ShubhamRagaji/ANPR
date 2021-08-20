@@ -3,6 +3,7 @@ import "./login.scss";
 import username from "../../components/Images/username-icon.png";
 import eye_icon from "../../components/Images/visibility-off.png";
 import eye_icon1 from "../../components/Images/visibility-on.png";
+import background from "../../components/Images/background.jpg";
 import { useHistory } from "react-router-dom";
 
 export default function RoleLogin(props) {
@@ -20,7 +21,7 @@ const history = useHistory()
   return (
     <div className="Role-Login">
       <div className="rl-login">
-        <div className="rl-info">
+        <div className="rl-info" style={{ backgroundImage: "url(" + background + ")" }}>
           <h2>Welcome to </h2>
           <p>DTDC AI DASHBOARD</p>
         </div>
