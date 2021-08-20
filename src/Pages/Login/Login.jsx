@@ -3,19 +3,18 @@ import "./login.scss";
 import username from "../../components/Images/username-icon.png";
 import eye_icon from "../../components/Images/visibility-off.png";
 import eye_icon1 from "../../components/Images/visibility-on.png";
+import { useHistory } from "react-router-dom";
 
-export default function RoleLogin() {
+export default function RoleLogin(props) {
+const history = useHistory()
+
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
 
   const [togglepassword, settogglepassword] = useState(false);
 
   const submit = () => {
-    if (Username === "admin" && Password === "admin@123") {
-      window.location.replace("/alerts");
-    } else {
-      alert("Wrong Username or Password");
-    }
+    
   };
 
   return (
@@ -49,7 +48,12 @@ export default function RoleLogin() {
             />
 
             {togglepassword ? (
-              <img src={eye_icon1} alt="visibility-on" className="eye-icon" onClick={() => settogglepassword(false)} />
+              <img
+                src={eye_icon1}
+                alt="visibility-on"
+                className="eye-icon"
+                onClick={() => settogglepassword(false)}
+              />
             ) : (
               <img
                 src={eye_icon}
@@ -59,7 +63,16 @@ export default function RoleLogin() {
               />
             )}
           </div>
-          <button className="roleLogin-button" onClick={submit}>
+          <button className="roleLogin-button" onClick={() => {
+            if (Username === "admin" && Password === "admin@123") {
+              history.push("/alerts")
+              
+              // window.location.replace("/alerts");
+              // props.history.push("/alerts");
+            } else {
+              alert("Wrong Username or Password");
+            }
+          }}>
             Login
           </button>
         </div>
