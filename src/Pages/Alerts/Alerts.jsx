@@ -47,7 +47,7 @@ export default function Alerts() {
   const [image, setimage] = useState();
   const [imagepPopup, setimagepPopup] = useState(false);
 
-  const [data, setdata] = useState([
+  const data = [
     {
       sr_no: "1",
       time_stamp: "2021-08-19 08:44:52",
@@ -294,7 +294,7 @@ export default function Alerts() {
       veh_type: "Sedan",
       img: img35,
     },
-  ]);
+  ];
 
   return (
     <div className="Alerts">
